@@ -1,0 +1,23 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "^src/(.*)": "<rootDir>/src/$1",
+    "^test/(.*)": "<rootDir>/test/$1"
+  },
+  "testMatch": ["<rootDir>/test/**/*.e2e-spec.{ts,js}"],
+  "testTimeout": 60000,
+  "testSequencer": "./test/custom-sequencer.js",
+  "collectCoverageFrom": [
+    "<rootDir>/src/**/*.(t|j)s",
+    "!<rootDir>/src/**/index.(t|j)s",
+    "!<rootDir>/src/**/*.dto.(t|j)s"
+  ],
+  "coverageDirectory": "<rootDir>/coverage",
+  "modulePathIgnorePatterns": [],
+  "coverageReporters": ["text", "cobertura", "html"]
+}
